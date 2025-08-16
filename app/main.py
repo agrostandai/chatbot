@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.routes import router
+from app.routes import main_router
 
 app = FastAPI(
     title="WhatsApp AI Bot",
@@ -7,4 +7,4 @@ app = FastAPI(
     version="1.0.0"
 )
 
-app.include_router(router)
+app.include_router(main_router)

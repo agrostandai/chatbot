@@ -3,19 +3,19 @@ from typing import Optional, List
 
 class Settings(BaseSettings):
     # OpenAI & Gemini Configuration
-    OPENAI_API_KEY: str
-    GEMINI_API_KEY: str
+    OPENAI_API_KEY: Optional[str] = None
+    GEMINI_API_KEY: Optional[str] = None
     AZURE_OPENAI_ENDPOINT: str = "https://agrostandai-openai-instance.openai.azure.com/"
     AZURE_OPENAI_API_VERSION: str = "2024-12-01-preview"
     AZURE_OPENAI_DEPLOYMENT_NAME: str = "gpt-4o"
     
     # Twilio Configuration
-    TWILIO_ACCOUNT_SID: str
-    TWILIO_AUTH_TOKEN: str
-    TWILIO_PHONE_NUMBER: str  # WhatsApp number (e.g., 'whatsapp:+14155238886')
+    TWILIO_ACCOUNT_SID: Optional[str] = None
+    TWILIO_AUTH_TOKEN: Optional[str] = None
+    TWILIO_PHONE_NUMBER: Optional[str] = None  # WhatsApp number (e.g., 'whatsapp:+14155238886')
     
     # MongoDB Configuration
-    MONGO_URI: str
+    MONGO_URI: Optional[str] = None
     DATABASE_NAME: str = "crop_disease_bot"
     
     # Bot Configuration
